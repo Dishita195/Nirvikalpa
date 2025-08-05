@@ -1,4 +1,17 @@
-h1{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  
+@font-face {
+  font-family: "Agains Regular";
+  src: url("/fonts/against-regular.ttf") format("truetype");
+}
+
+.againsthead {
+  font-family: "Against Regular";
+  color: rgb(255, 233, 233);
+  font-size: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
