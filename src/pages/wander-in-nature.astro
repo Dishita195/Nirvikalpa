@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout>
+  <Header />
+  <ul>
+    <li><img src="/public/Insects/moth.jpg" alt="moth"></li>
+    <li><video src="/public/Insects/video1.mp4"></video></li>
+    <li>Three</li>
+    <li>Four</li>
+    <li>Five</li>
+    <li>Six</li>
+    <li>Seven</li>
+    <li>Eight</li>
+    <li>Nine</li>
+    <li>Ten</li>
+    <li>Eleven</li>
+    <li>Twelve</li>
+    <li>Thirteen</li>
+  </ul>
+</Layout>
+
+<style>
+  ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+  grid-auto-rows: minmax(auto, 0.3vh);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+
+}
+
+li:nth-child(4),
+li:nth-child(5),
+li:nth-child(10){
+  grid-column: span 3;
+  grid-row: span 5;
+}
+li:nth-child(7),
+li:nth-child(8) {
+  grid-row: span 5;
+  grid-column: span 2;
+}
+li:nth-child(1),
+li:nth-child(2),
+li:nth-child(6),
+li:nth-child(9) {
+  grid-row: span 3;
+  grid-column: span 4;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+video {
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+
+body {
+  background: #F6F3EA;
+
+}
+ul {
+  margin: 20px;
+  padding: 0;
+  list-style: none;
+  color: white;
+  font-family: Avenir, Heveltica, Arial, san-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+li {
+  padding: 1em;
+  background: #F9423A;
+  text-align: center;
+  justify-items: center;
+}
+
+</style>
