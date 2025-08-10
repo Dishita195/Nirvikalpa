@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Agains Regular";
+  font-family: "AgainstRegular";
   src: url("/fonts/against-regular.ttf") format("truetype");
 }
 
 .againsthead {
-  font-family: "Against Regular";
+  font-family: "AgainstRegular";
   color: rgb(255, 233, 233);
   font-size: 4rem;
 
@@ -14,4 +14,11 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+@font-face {
+  font-family: "DellaRespira";
+  src: url(/public/fonts/DellaRespira-Regular.ttf) format("truetype");
+}
+body{
+  font-family: "DellaRespira";
 }

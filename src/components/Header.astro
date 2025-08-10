@@ -1,15 +1,47 @@
-<header class="head">
-  <nav>
-    <a href="../pages/home.astro">Home</a>
-    <a href="../pages/jainism.astro">Jainism</a>
-    <a href="../pages/art.astro">Art</a>
-    <a href="../pages/wander-in-nature.astro">Wander in Nature</a>
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <nav class="head">
+    <a href="/home/" class={currentPath === "/home/" ? "green" : "purple"}
+      >Home</a
+    >
+
+    <a href="/jainism/" class={currentPath === "/jainism/" ? "green" : "purple"}
+      >Jainism</a
+    >
+
+    <a href="/art/" class={currentPath === "/art/" ? "green" : "purple"}>Art</a>
+
+    <a
+      href="/wander-in-nature/"
+      class={currentPath === "/wander-in-nature/" ? "green" : "purple"}
+      >Wander in Nature</a
+    >
   </nav>
 </header>
 
 <style>
-  header {
+  .head {
     background-color: white;
-    stroke: #eefcce;
+    border-bottom: 2px solid  #EEFCCE;
+    /* border-width: 20px; */
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+  }
+  .purple,
+  .green {
+    text-decoration: none;
+  }
+  .purple {
+    color: #8057bd;
+  }
+  .green {
+    color: #9eb25d;
   }
 </style>
