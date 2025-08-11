@@ -7,9 +7,9 @@ import Layout from "../layouts/Layout.astro";
   <div class="home-body">
     <div class="home-grid">
       <div class="row1">
-        <h2 style="font-size: 32px;">Nirvikalpa</h2>
-        <p class="nirvikalpa-meaning" style="font-size: 15px;">
-          a state of consciousness beyond the limitations <br /> of thought, perception,
+        <h2 style="font-size: 20px;">Nirvikalpa</h2>
+        <p class="nirvikalpa-meaning" style="font-size: 14px;">
+          a state of consciousness beyond the limitations of thought, perception,
           and individual identity.
         </p>
       </div>
@@ -20,14 +20,14 @@ import Layout from "../layouts/Layout.astro";
           to nothing. Free
         </p>
       </div>
-      <p class="say-hello" style="font-size: 15px;">
-        This little bug has something to say to you. Say hello!
-      </p>
       <div class="home-footer">
         <a class="jainism" href="/jainism/">Jainism</a>
         <a class="art" href="/art/">Art</a>
         <a class="wander" href="/wander-in-nature/">Wander in Nature</a>
       </div>
+      <p class="say-hello" style="font-size: 15px;">
+        This little bug has something to say to you. Say hello!
+      </p>
     </div>
   </div>
 </Layout>
@@ -41,15 +41,16 @@ import Layout from "../layouts/Layout.astro";
     /* padding: 0; */
   }
   h2 {
-    color: #9eb25d;
+    /* color: #9eb25d; */
     text-align: left;
     font-family: "Against Regular";
     margin-top: 0;
   }
 
   .nirvikalpa-meaning {
-    margin-top: 0;
-    margin-left: 10px;
+    /* margin-top: 0.5rem; */
+    margin: 3px;
+    margin-left: 20px;
   }
 
   body {
@@ -68,39 +69,40 @@ import Layout from "../layouts/Layout.astro";
   .home-body {
     background:
       url("/images/illustration-low.png") top right no-repeat,
-      linear-gradient(#9eb25d 30px, transparent 30px);
+      linear-gradient(#9eb25d 60px, transparent 60px);
     background-size:
-      45%,
+      52%,
       100% auto;
   }
 
   .row1 {
-    padding-top: 50px;
+    padding-top: 15px;
     display: grid;
     grid-template-columns: 1fr 9fr;
     flex-direction: column;
+    color: white;
   }
 
   .row2 {
-    padding-top: 30px;
+    padding-top: 0;
   }
   .who-am-i {
     margin-top: 0;
   }
-  .say-hello{
-    /* padding-top: 20px; */
+
+
+  .home-footer {
     display: flex;
-    align-items: center;
-  }
-
-
-
-
-  .home-footer{
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+    max-width: 30%;
+  }
 
+   .say-hello {
+    padding-top: 10px;
+    display: flex;
+    /* align-items: center; */
+    /* padding-bottom: 30px; */
   }
 </style>
