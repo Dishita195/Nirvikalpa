@@ -9,8 +9,8 @@ import Layout from "../layouts/Layout.astro";
       <div class="row1">
         <h2 style="font-size: 20px;">Nirvikalpa</h2>
         <p class="nirvikalpa-meaning" style="font-size: 14px;">
-          a state of consciousness beyond the limitations of thought, perception,
-          and individual identity.
+          a state of consciousness beyond the limitations of thought,
+          perception, and individual identity.
         </p>
       </div>
       <div class="row2">
@@ -21,9 +21,19 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
       <div class="home-footer">
-        <a class="jainism" href="/jainism/">Jainism</a>
-        <a class="art" href="/art/">Art</a>
-        <a class="wander" href="/wander-in-nature/">Wander in Nature</a>
+        <div class="jain">
+          <a class="jainism" href="/jainism/">Jainism</a>
+        </div>
+
+        <div class="arts">
+          <a class="art" href="/art/">
+            <img src="/images/artbutton.png" class="art-img" />
+            Art</a
+          >
+        </div>
+        <div class="wander">
+          <a class="wandertext" href="/wander-in-nature/"> Wander in Nature</a>
+        </div>
       </div>
       <p class="say-hello" style="font-size: 15px;">
         This little bug has something to say to you. Say hello!
@@ -33,9 +43,6 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-
-.home-body
-
   .my-name {
     color: #8057bd;
     text-align: left;
@@ -72,11 +79,11 @@ import Layout from "../layouts/Layout.astro";
   .home-body {
     background:
       url("/images/illustration-low.png") top right no-repeat,
-      linear-gradient(#9eb25d 60px, transparent 60px);
+      linear-gradient(#9eb25d 100px, transparent 100px);
     background-size:
       52%,
       100% auto;
-      /* background-color: beige; */
+    /* background-color: beige; */
   }
 
   .row1 {
@@ -94,19 +101,68 @@ import Layout from "../layouts/Layout.astro";
     margin-top: 0;
   }
 
+  /* .wander {
+    top: 10px;
+    align-items: center;
+    background-image: url("/images/wanderbutton.png");
+    width: 25rem;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  } */
+
+  .wander {
+    background-color: #fff9d9;
+    width: 140px;
+    height: 70px;
+    background-position: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 10px;
+  }
+  .wandertext {
+    margin-bottom: -10px;
+  }
 
   .home-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     padding-bottom: 20px;
-    max-width: 30%;
+    max-width: 35%;
+    margin-bottom: 80px;
+
+  }
+  .home-footer a {
+    text-decoration: none;
   }
 
-   .say-hello {
-    padding-top: 10px;
+  .jainism {
+    border-left: 8px solid #9eb25d;
+    padding: 5px;
+  }
+
+  .art-img {
+    margin-left: 10px;
+    margin-bottom: -5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .art {
+    display: grid;
+    padding-top: 40px;
+    padding-left: 10px;
+  }
+
+
+  .say-hello {
+    /* padding-top: -40px; */
     display: flex;
-    /* align-items: center; */
-    /* padding-bottom: 30px; */
+
   }
 </style>
