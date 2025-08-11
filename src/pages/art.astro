@@ -1,9 +1,30 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 
 <Layout>
-<h1>Coming Soon!</h1>
+
+<h1 class="againsthead">Art</h1>
+<Header />
+<h1 class="temporary">Coming Soon!</h1>
+<br><br><br>
 </Layout>
+
+<style>
+  .temporary {
+    font-size: larger;
+    text-align: center;
+    margin: 200px;
+
+  }
+
+   .againsthead {
+    background-color: #8057BD;
+    color: white;
+    font-size: 64px;
+  }
+
+</style>
