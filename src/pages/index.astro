@@ -1,21 +1,64 @@
 ---
+// Landing.astro
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="mainhead">
+  <div id="landing" class="mainhead">
     <h1 class="againsthead">Nirvikalpa</h1>
   </div>
+  <iframe src="/home2" class="home-frame"></iframe>
 </Layout>
 
 <style>
+  .home-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 0; /* Home page behind */
+  }
+
+  .mainhead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9eb25d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+    z-index: 1; /* On top initially */
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+
   .againsthead {
     margin: 0;
     padding: 0;
-  }
-  .mainhead {
-    background-color: #9eb25d;
-    overflow: hidden;
+    color: white;
   }
 </style>
+
+<script>
+  const landing = document.getElementById("landing");
+
+  function goHome() {
+    landing.classList.add("fade-out");
+    setTimeout(() => {
+      landing.style.display = "none";
+    }, 1000); // Matches fade duration
+  }
+
+  setTimeout(goHome, 3000); // Auto fade after 5s
+  landing.addEventListener("click", goHome);
+</script>
+
+
