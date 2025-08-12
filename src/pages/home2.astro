@@ -37,9 +37,12 @@ import Layout from "../layouts/Layout.astro";
           >
         </div>
       </div>
-      <p class="say-hello" style="font-size: 15px;">
-        This little bug has something to say to you. Say hello!...............
-      </p>
+      <div class="handles">
+        <p class="say-hello" style="font-size: 15px;">
+          This little bug has something to say to you. Say hello!...............
+        </p>
+        <img class="b1" src="/images/bugs/b1.png" alt="" />
+      </div>
     </div>
   </div>
 </Layout>
@@ -164,37 +167,17 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .say-hello {
-    display: flex;
+    /* display: flex; */
     align-items: center;
   }
 
-  @keyframes hang {
-    50% {
-      transform: translateY(3px);
-    }
-
-    100% {
-      transform: translateY(6px);
-    }
+  .b1 {
+    width: 20px;
+    height: auto;
   }
-
-  .hang {
-    display: inline-block;
-    transition-duration: 0.5s;
-    transition-property: transform;
-
-    @include hideTapHighlightColor();
-    @include hardwareAccel();
-    @include improveAntiAlias();
-
-    &:hover {
-      transform: translateY(6px);
-      animation-name: hang;
-      animation-duration: 1.5s;
-      animation-delay: $defaultDuration;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
+  .handles {
+    display: grid;
+    flex-direction: row;
+    width: ;
   }
 </style>
