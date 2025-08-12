@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
@@ -41,7 +42,13 @@ import Layout from "../layouts/Layout.astro";
         <p class="say-hello" style="font-size: 15px;">
           This little bug has something to say to you. Say hello!...............
         </p>
-        <img class="b1" src="/images/bugs/b1.png" alt="" />
+        <div class="card">
+          <Card
+            btnimg="/images/buttons/1.png"
+            title="This is a trial text you dont have to read it! What if there is more to write? How will it look?"
+            image="/images/bugs/b1.png"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -167,20 +174,19 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .say-hello {
-    /* display: flex; */
+    display: flex;
     align-items: center;
   }
 
-  .b1 {
-    width: 2rem;
-    height: auto;
-    transform: rotate(30deg);
-    cursor: pointer;
-  }
+
   .handles {
-    display:grid;
-      grid-template-columns: 8fr 2fr;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
     flex-direction: column;
-    width: 50%;
+    width: 57%;
+    align-items: center;
+  }
+  .card {
+    margin-top: -100px;
   }
 </style>
