@@ -6,21 +6,22 @@ import Header from "../components/Header.astro";
 
 <Layout>
   <h1 class="againsthead">Wander in Nature</h1>
+  <h2 class="subhead">a catalogue of magic, mystery and  mother earth</h2>
   <Header />
   <ul>
-    <li><img src="/Insects/moth.jpg" alt="moth"></li>
+    <li><img src="/Insects/1.jpg" alt=""></li>
     <li><video src="/Insects/video1.mp4"></video></li>
-    <li>Three</li>
-    <li>Four</li>
-    <li>Five</li>
-    <li>Six</li>
-    <li>Seven</li>
-    <li>Eight</li>
-    <li>Nine</li>
-    <li>Ten</li>
-    <li>Eleven</li>
-    <li>Twelve</li>
-    <li>Thirteen</li>
+    <li><img src="/Insects/2.jpg" alt=""></li>
+    <li><img src="/Insects/3.jpg" alt=""></li>
+    <li><img src="/Insects/4.jpg" alt=""></li>
+    <li><img src="/Insects/5.jpg" alt=""></li>
+    <li><img src="/Insects/6.jpg" alt=""></li>
+    <li><img src="/Insects/7.jpg" alt=""></li>
+    <li><img src="/Insects/8.jpg" alt=""></li>
+    <li><img src="/Insects/9.jpg" alt=""></li>
+    <li><img src="/Insects/10.jpg" alt=""></li>
+    <li><img src="/Insects/11.jpg" alt=""></li>
+    <li><img src="/Insects/12.jpg" alt=""></li>
   </ul>
 </Layout>
 
@@ -34,23 +35,29 @@ import Header from "../components/Header.astro";
 
 }
 
-li:nth-child(4),
+li:nth-child(3),
+li:nth-child(2),
 li:nth-child(5),
-li:nth-child(10){
+li:nth-child(11),
+li:nth-child(10) {
   grid-column: span 3;
-  grid-row: span 5;
+  grid-row: span 22;
 }
 li:nth-child(7),
+li:nth-child(12),
 li:nth-child(8) {
-  grid-row: span 5;
-  grid-column: span 2;
+  grid-column: span 3;
+  grid-row: span 15;
+
 }
 li:nth-child(1),
-li:nth-child(2),
+li:nth-child(4),
 li:nth-child(6),
+li:nth-child(13),
 li:nth-child(9) {
-  grid-row: span 3;
-  grid-column: span 4;
+  grid-column: span 3;
+  grid-row: span 10;
+
 }
 img {
   width: 100%;
@@ -86,7 +93,7 @@ ul {
 }
 li {
   padding: 1em;
-  background: #F9423A;
+  background: #ffedec;
   text-align: center;
   justify-items: center;
 }

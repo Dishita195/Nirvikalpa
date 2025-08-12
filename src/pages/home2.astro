@@ -22,21 +22,23 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="home-footer">
         <div class="jain">
-          <a class="jainism" href="/jainism/">Jainism</a>
+          <a rel="hang" class="jainism" href="/jainism/">Jainism</a>
         </div>
 
         <div class="arts">
-          <a class="art" href="/art/">
+          <a rel="hang" class="art" href="/art/">
             <img src="/images/artbutton.png" class="art-img" />
             Art</a
           >
         </div>
         <div class="wander">
-          <a class="wandertext" href="/wander-in-nature/"> Wander in Nature</a>
+          <a rel="hang" class="wandertext" href="/wander-in-nature/">
+            Wander in Nature</a
+          >
         </div>
       </div>
       <p class="say-hello" style="font-size: 15px;">
-        This little bug has something to say to you. Say hello!
+        This little bug has something to say to you. Say hello!...............
       </p>
     </div>
   </div>
@@ -47,6 +49,7 @@ import Layout from "../layouts/Layout.astro";
     color: #8057bd;
     text-align: left;
     font-family: "Against Regular";
+    font-weight: normal;
     margin: 0;
     /* padding: 0; */
   }
@@ -54,6 +57,7 @@ import Layout from "../layouts/Layout.astro";
     /* color: #9eb25d; */
     text-align: left;
     font-family: "Against Regular";
+    font-weight: normal;
     margin-top: 0;
   }
 
@@ -73,13 +77,13 @@ import Layout from "../layouts/Layout.astro";
     grid-template-columns: 100%;
     height: 100vh;
     padding-left: 120px;
-    gap: 20px;
+    /* gap: 10px; */
   }
 
   .home-body {
     background:
       url("/images/illustration-low.png") top right no-repeat,
-      linear-gradient(#9eb25d 100px, transparent 100px);
+      linear-gradient(#9eb25d 60px, transparent 60px);
     background-size:
       52%,
       100% auto;
@@ -135,7 +139,6 @@ import Layout from "../layouts/Layout.astro";
     padding-bottom: 20px;
     max-width: 35%;
     margin-bottom: 80px;
-
   }
   .home-footer a {
     text-decoration: none;
@@ -144,6 +147,7 @@ import Layout from "../layouts/Layout.astro";
   .jainism {
     border-left: 8px solid #9eb25d;
     padding: 5px;
+    cursor: pointer;
   }
 
   .art-img {
@@ -159,10 +163,38 @@ import Layout from "../layouts/Layout.astro";
     padding-left: 10px;
   }
 
-
   .say-hello {
-    /* padding-top: -40px; */
     display: flex;
+    align-items: center;
+  }
 
+  @keyframes hang {
+    50% {
+      transform: translateY(3px);
+    }
+
+    100% {
+      transform: translateY(6px);
+    }
+  }
+
+  .hang {
+    display: inline-block;
+    transition-duration: 0.5s;
+    transition-property: transform;
+
+    @include hideTapHighlightColor();
+    @include hardwareAccel();
+    @include improveAntiAlias();
+
+    &:hover {
+      transform: translateY(6px);
+      animation-name: hang;
+      animation-duration: 1.5s;
+      animation-delay: $defaultDuration;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
   }
 </style>
