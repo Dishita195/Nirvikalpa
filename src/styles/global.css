@@ -6,20 +6,32 @@
 .againsthead {
   font-family: "AgainstRegular";
   color: rgb(255, 233, 233);
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: normal;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
+.subhead {
+  font-family: "DellaRespira";
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+.mainhead {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @font-face {
   font-family: "DellaRespira";
   src: url(/public/fonts/DellaRespira-Regular.ttf) format("truetype");
 }
-body{
+body {
   font-family: "DellaRespira";
 }

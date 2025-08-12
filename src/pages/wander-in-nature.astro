@@ -5,104 +5,155 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout>
-  <h1 class="againsthead">Wander in Nature</h1>
-  <h2 class="subhead">a catalogue of magic, mystery and  mother earth</h2>
-  <Header />
+  <div id="banner" class="mainhead">
+    <h1 class="againsthead">Wander in Nature</h1>
+    <h2 class="subhead">a catalogue of magic, mystery and mother earth</h2>
+  </div>
+  <div id="header-placeholder" style="display:none;"></div>
+  <div id="site-header" class="sticky-header">
+    <Header />
+  </div>
   <ul>
-    <li><img src="/Insects/1.jpg" alt=""></li>
+    <li><img src="/Insects/1.jpg" alt="" /></li>
     <li><video src="/Insects/video1.mp4"></video></li>
-    <li><img src="/Insects/2.jpg" alt=""></li>
-    <li><img src="/Insects/3.jpg" alt=""></li>
-    <li><img src="/Insects/4.jpg" alt=""></li>
-    <li><img src="/Insects/5.jpg" alt=""></li>
-    <li><img src="/Insects/6.jpg" alt=""></li>
-    <li><img src="/Insects/7.jpg" alt=""></li>
-    <li><img src="/Insects/8.jpg" alt=""></li>
-    <li><img src="/Insects/9.jpg" alt=""></li>
-    <li><img src="/Insects/10.jpg" alt=""></li>
-    <li><img src="/Insects/11.jpg" alt=""></li>
-    <li><img src="/Insects/12.jpg" alt=""></li>
+    <li><img src="/Insects/2.jpg" alt="" /></li>
+    <li><img src="/Insects/3.jpg" alt="" /></li>
+    <li><img src="/Insects/4.jpg" alt="" /></li>
+    <li><img src="/Insects/5.jpg" alt="" /></li>
+    <li><img src="/Insects/6.jpg" alt="" /></li>
+    <li><img src="/Insects/7.jpg" alt="" /></li>
+    <li><img src="/Insects/8.jpg" alt="" /></li>
+    <li><img src="/Insects/9.jpg" alt="" /></li>
+    <li><img src="/Insects/10.jpg" alt="" /></li>
+    <li><img src="/Insects/11.jpg" alt="" /></li>
+    <li><img src="/Insects/12.jpg" alt="" /></li>
   </ul>
 </Layout>
 
 <style>
+  .sticky-header {
+    width: 100%;
+  }
+
+  .is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white; /* change as needed */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.12); */
+  }
+
+  #header-placeholder {
+    display: none;
+  }
   ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
-  grid-auto-rows: minmax(auto, 0.3vh);
-  grid-gap: 1rem;
-  grid-auto-flow: dense;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(auto, 0.3vh);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+  }
 
-}
+  li:nth-child(3),
+  li:nth-child(2),
+  li:nth-child(5),
+  li:nth-child(11),
+  li:nth-child(10) {
+    grid-column: span 3;
+    grid-row: span 22;
+  }
+  li:nth-child(7),
+  li:nth-child(12),
+  li:nth-child(8) {
+    grid-column: span 3;
+    grid-row: span 15;
+  }
+  li:nth-child(1),
+  li:nth-child(4),
+  li:nth-child(6),
+  li:nth-child(13),
+  li:nth-child(9) {
+    grid-column: span 3;
+    grid-row: span 10;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-li:nth-child(3),
-li:nth-child(2),
-li:nth-child(5),
-li:nth-child(11),
-li:nth-child(10) {
-  grid-column: span 3;
-  grid-row: span 22;
-}
-li:nth-child(7),
-li:nth-child(12),
-li:nth-child(8) {
-  grid-column: span 3;
-  grid-row: span 15;
-
-}
-li:nth-child(1),
-li:nth-child(4),
-li:nth-child(6),
-li:nth-child(13),
-li:nth-child(9) {
-  grid-column: span 3;
-  grid-row: span 10;
-
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-video {
-   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-
-
-
-
-
-body {
-  /* background: #F6F3EA; */
-
-}
-ul {
-  margin: 20px;
-  padding: 0;
-  list-style: none;
-  color: white;
-  font-family: Avenir, Heveltica, Arial, san-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-li {
-  padding: 1em;
-  background: #ffedec;
-  text-align: center;
-  justify-items: center;
-}
-
-
-
-.againsthead {
-    background-color: #645D3E;
+  body {
+    /* background: #F6F3EA; */
+  }
+  ul {
+    margin: 20px;
+    padding: 0;
+    list-style: none;
     color: white;
-    font-size: 64px;
+    font-family: Avenir, Heveltica, Arial, san-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  li {
+    padding: 1em;
+    background: #ffedec;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .againsthead {
+    color: white;
+  }
+
+  .mainhead {
+    background-color: #645d3e;
+  }
+  .subhead {
+    color: #fff9d9;
   }
 </style>
+
+<script>
+  (function () {
+    const banner = document.getElementById("banner");
+    const siteHeader = document.getElementById("site-header");
+    const placeholder = document.getElementById("header-placeholder");
+
+    if (!banner || !siteHeader || !placeholder) return;
+
+    function setPlaceholderHeight() {
+      const h = siteHeader.getBoundingClientRect().height;
+      placeholder.style.height = h + "px";
+    }
+
+    // Observe banner visibility
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            siteHeader.classList.remove("is-fixed");
+            placeholder.style.display = "none";
+          } else {
+            setPlaceholderHeight();
+            placeholder.style.display = "block";
+            siteHeader.classList.add("is-fixed");
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    // start observing
+    io.observe(banner);
+    window.addEventListener("resize", setPlaceholderHeight);
+  })();
+</script>

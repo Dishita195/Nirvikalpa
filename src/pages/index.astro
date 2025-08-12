@@ -4,26 +4,18 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1 class="againsthead">Nirvikalpa</h1>
+  <div class="mainhead">
+    <h1 class="againsthead">Nirvikalpa</h1>
+  </div>
 </Layout>
 
 <style>
-  body {
-    background-color: #9eb25d;
-    overflow: hidden;
-  }
   .againsthead {
-    /* color: #ffffff; */
-    /* font-size: 6rem; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
   }
-  /* @font-face {
-    font-family: "against";
-    src: url("/public/fonts/against-regular.ttf") format(".ttf");
-  } */
+  .mainhead {
+    background-color: #9eb25d;
+    overflow: hidden;
+  }
 </style>

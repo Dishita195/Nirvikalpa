@@ -4,27 +4,99 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 ---
 
-
 <Layout>
-
-<h1 class="againsthead">Art</h1>
-<Header />
-<h1 class="temporary">Coming Soon!</h1>
-<br><br><br>
+  <div id="banner" class="mainhead" style="background-color: #8057BD;">
+    <h1 class="againsthead">Art</h1>
+    <h2 class="subhead" style="color: #FFF9D9;">
+      stuff that i do to heal myself
+    </h2>
+  </div>
+  <div id="header-placeholder" style="display:none;"></div>
+  <div id="site-header" class="sticky-header">
+    <Header />
+  </div>
+  <h1 class="temporary">Coming Soon!</h1>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+  /><br /><br /><br /><br /><br /><br /><br /><br />
 </Layout>
 
 <style>
+  /* .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+  } */
+
+  .sticky-header {
+    width: 100%;
+  }
+
+  .is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white; /* change as needed */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.12); */
+  }
+
+  #header-placeholder {
+    display: none;
+  }
   .temporary {
     font-size: larger;
     text-align: center;
     margin: 200px;
-
   }
-
-   .againsthead {
-    background-color: #8057BD;
+  .againsthead {
     color: white;
-    font-size: 64px;
   }
 
+  .temporary {
+    font-size: larger;
+    text-align: center;
+    margin: 200px;
+  }
+
+  .againsthead {
+    color: white;
+  }
 </style>
+
+<script>
+  (function () {
+    const banner = document.getElementById("banner");
+    const siteHeader = document.getElementById("site-header");
+    const placeholder = document.getElementById("header-placeholder");
+
+    if (!banner || !siteHeader || !placeholder) return;
+
+    function setPlaceholderHeight() {
+      const h = siteHeader.getBoundingClientRect().height;
+      placeholder.style.height = h + "px";
+    }
+
+    // Observe banner visibility
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            siteHeader.classList.remove("is-fixed");
+            placeholder.style.display = "none";
+          } else {
+            setPlaceholderHeight();
+            placeholder.style.display = "block";
+            siteHeader.classList.add("is-fixed");
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    // start observing
+    io.observe(banner);
+    window.addEventListener("resize", setPlaceholderHeight);
+  })();
+</script>
