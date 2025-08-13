@@ -30,19 +30,26 @@ import Card from "../components/Card.astro";
     <li><img src="/Insects/12.jpg" alt="" /></li>
   </ul>
 
-   <div class="bcard4">
-  <Card
-    btnimg="/images/buttons/4.png"
-    title="Jumping spiders have 4 eyes! Ever looked at them closely?"
-    image="/images/bugs/b4.png"
-  />
+  <div class="bcard4">
+    <Card
+      btnimg="/images/buttons/4.png"
+      title="Jumping spiders have 4 eyes! Ever looked at them closely?"
+      image="/images/bugs/b4.png"
+    />
   </div>
-   <div class="bcard5">
-  <Card
-    btnimg="/images/buttons/5.png"
-    title="Hey! Will you keep me?"
-    image="/images/bugs/b5.png"
-  />
+  <div class="bcard5">
+    <Card
+      btnimg="/images/buttons/5.png"
+      title="Hey! Will you keep me?"
+      image="/images/bugs/b5.png"
+    />
+  </div>
+  <div class="bcard6">
+    <Card
+      btnimg="/images/buttons/6.png"
+      title="Spiders bob as a defence mechanism! Will you bob with them?"
+      image="/images/bugs/b6.png"
+    />
   </div>
 </Layout>
 
@@ -59,7 +66,13 @@ import Card from "../components/Card.astro";
     top: 750px;
     left: 100px;
   }
-  .mainhead{
+  .bcard6 {
+    position: absolute;
+    z-index: 999;
+    /* bottom: 30px; */
+    right: 1px;
+  }
+  .mainhead {
     position: relative;
   }
   .sticky-header {
