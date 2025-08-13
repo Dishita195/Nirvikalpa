@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
@@ -16,11 +17,43 @@ import Header from "../components/Header.astro";
     <Header />
   </div>
   <h1 class="temporary">Coming Soon!</h1>
+
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
   /><br /><br /><br /><br /><br /><br /><br /><br />
+
+  <div class="bcard2">
+  <Card
+    btnimg="/images/buttons/2.png"
+    title="Why are you bugging me?"
+    image="/images/bugs/b2.png"
+  />
+  </div>
+  <div class="bcard3">
+  <Card
+    btnimg="/images/buttons/3.png"
+    title="Ant stomachs are see-through. The colour of their food can be seen through their stomach!"
+    image="/images/bugs/b3.png"
+  />
+  </div>
 </Layout>
 
 <style>
+  .bcard2 {
+    position: absolute;
+    z-index: 999;
+    top: 350px;
+    left: 200px;
+  }
+  .bcard3 {
+    position: absolute;
+    z-index: 999;
+    top: 1000px;
+    left: 600px;
+  }
+  .mainhead{
+    position: relative;
+  }
+
   /* .sticky-header {
     position: sticky;
     top: 0;

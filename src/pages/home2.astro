@@ -43,11 +43,34 @@ import Card from "../components/Card.astro";
           This little bug has something to say to you. Say hello!...............
         </p>
         <div class="card">
-          <Card
+          <!-- <Card
             btnimg="/images/buttons/1.png"
-            title="This is a trial text you dont have to read it! What if there is more to write? How will it look?"
+            title="Instagram"
             image="/images/bugs/b1.png"
-          />
+          /> -->
+          <Card btnimg="/images/buttons/1.png" image="/images/bugs/b1.png">
+            <div class="social-links">
+            <a
+              href="https://www.instagram.com/_dishitajain"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="links"
+              style="color:#8057bd; text-decoration:none; margin-right: 15px;"
+            >
+              Instagram
+            </a>
+            <br>
+            <a
+              href="https://www.linkedin.com/in/dishitajain19"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="links"
+              style="color:#8057bd; text-decoration:none;"
+            >
+              LinkedIn
+            </a>
+            </div>
+          </Card>
         </div>
       </div>
     </div>
@@ -55,6 +78,16 @@ import Card from "../components/Card.astro";
 </Layout>
 
 <style>
+  .social-links {
+    min-width: 200px;
+    margin-top: 60px;
+  }
+  .links{
+    display: block;
+    /* margin-top: 100px; */
+    /* margin-left: 100px;
+    margin-right: 50px; */
+  }
   .my-name {
     color: #8057bd;
     text-align: left;
@@ -178,7 +211,6 @@ import Card from "../components/Card.astro";
     align-items: center;
   }
 
-
   .handles {
     display: grid;
     grid-template-columns: 8fr 2fr;
@@ -187,6 +219,6 @@ import Card from "../components/Card.astro";
     align-items: center;
   }
   .card {
-    margin-top: -100px;
+    /* margin-top: -100px; */
   }
 </style>

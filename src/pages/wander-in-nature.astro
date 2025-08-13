@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
@@ -28,9 +29,39 @@ import Header from "../components/Header.astro";
     <li><img src="/Insects/11.jpg" alt="" /></li>
     <li><img src="/Insects/12.jpg" alt="" /></li>
   </ul>
+
+   <div class="bcard4">
+  <Card
+    btnimg="/images/buttons/4.png"
+    title="Jumping spiders have 4 eyes! Ever looked at them closely?"
+    image="/images/bugs/b4.png"
+  />
+  </div>
+   <div class="bcard5">
+  <Card
+    btnimg="/images/buttons/5.png"
+    title="Hey! Will you keep me?"
+    image="/images/bugs/b5.png"
+  />
+  </div>
 </Layout>
 
 <style>
+  .bcard4 {
+    position: absolute;
+    z-index: 999;
+    top: 150px;
+    right: 100px;
+  }
+  .bcard5 {
+    position: absolute;
+    z-index: 999;
+    top: 750px;
+    left: 100px;
+  }
+  .mainhead{
+    position: relative;
+  }
   .sticky-header {
     width: 100%;
   }
